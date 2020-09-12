@@ -1,6 +1,6 @@
 const grades = [ 100, 60, 80 ];
 
-let print = avgSchoolGrade(grades);
+let print = nameSchoolGrade(grades);
 console.log(print);
 
 function avgSchoolGrade(grades) {
@@ -11,7 +11,11 @@ function avgSchoolGrade(grades) {
         sumTotal += grade;
     }
 
-    let final = sumTotal / lengthGrand;
+    return sumTotal / lengthGrand;
+};
+
+function nameSchoolGrade(grade) {
+    const final = avgSchoolGrade(grade);
 
     if (final < 60)
         return 'F';
